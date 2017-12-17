@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h2>{{ page.title }}</h2>
+
+  <div class="date">
+   {% for tag in page.tags %}
+      <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+   {% endfor %}
+
+   Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+
+</article>
